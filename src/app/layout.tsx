@@ -1,3 +1,4 @@
+import Navbar from './components/navbar'
 import './globals.css'
 
 export const metadata = {
@@ -12,7 +13,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        {children}
+        <div className='flex fixed bottom-0 justify-center items-center w-full bg-black text-white'>Footer copyright</div>
+        </body>
     </html>
   )
 }
